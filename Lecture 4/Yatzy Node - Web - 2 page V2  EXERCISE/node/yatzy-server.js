@@ -266,6 +266,9 @@ function processReq(req,res){
             reportError(res,err);
           }
           break;
+        case "beertype":
+          console.log("Test");
+          break;
         default: //for anything else we assume it is a file to be served
           return fileResponse(res, queryPath);
         break;

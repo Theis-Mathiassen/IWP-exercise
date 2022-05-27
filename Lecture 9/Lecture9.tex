@@ -1,0 +1,50 @@
+\section{exercises}
+\subsection{R1}
+There is no difference between hosts and end systems, they are synonyms.
+Some host systems, tvs, gaming consoles computers, server?
+
+\subsection{R19}
+$A->R_1->R_2->R_3->B$
+$R_1 = 500kbps, R_2 = 2Mbps, R_3 = 1 Mbps$.
+
+a)\\
+The bottleneck of the system is $R_1$ and therefore 500kbps.
+
+b)\\
+$File = 4000 kb$.\\
+$Time = \frac{4000}{500} = 8 seconds$.
+
+c)\\
+$R_2 = 100kbps$\\
+$Time = \frac{4000}{100} = 40 seconds$.
+
+
+\subsection{R23}
+Layers of the internet protocol stack: (Se bogen side 80).
+\begin{enumerate}
+    \item Application
+    \item Transport layer (TCP: Segments/reasemblies packets, flow control ... UDP: No flow control, no congestion control).
+    \item Network layer
+    \item Link layer
+    \item Physical
+\end{enumerate}
+
+\subsection{R24}
+Encapsulation: Happens at each step of the internet protocol. Where one layer packeges the recieved message and attaches a header.
+De-encapsulation: Removes the header and sends the message down the internet protocol.
+
+\subsection{P25}
+\begin{enumerate}[label=\alph*)]
+    \item $R = 5 Mbps$\\
+    $d_prop = \frac{20000}{2.5*10^8} = 0.08 seconds$\\
+    $Bandwidth delay product = R * d_prop = 400000 bits$
+    \item Se svar a)
+    \item The Bandwidth delay product is the number of bits on the line at once.
+    \item $20000000 / 400000 = 50 meter$ 1 bit's "width" is 50 meter.
+    \item $\frac{L}{R\frac{L}{c}} = \frac{L}{R\frac{1}{c}L}=\frac{1}{R\frac{1}{c}}=\frac{1}{\frac{R}{c}}=\frac{c}{R}$
+\end{enumerate}
+
+
+
+
+

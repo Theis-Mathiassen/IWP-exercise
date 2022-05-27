@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>This is a websocket test scheme!</title>
+    </head>
+    <body>
+        <h1>The beginning of a chat app.</h1>
+        <input id="input" style="width:100%; padding:10px; border:solidblack 2px"/>
+        <script defer>
+            // Take care of some UI details
+            let nick = prompt("Enter your nickname"); // Get user's nickname
+            let input = document.getElementById("input"); // Find the input field
+            input.focus(); // Set keyboard focus
+            
+            const ws = new WebSocket('ws://localhost:3000');
+
+            ws.addEventListener("open", () => {
+                console.log("We are connected");
+            });
+            
+            input.addEventListener("change", () => {
+                ws.send(nick + ": " + input.value);
+                input.value = ""; // Clear the input
+            });
+        </script>
+    </body>
+</html>
